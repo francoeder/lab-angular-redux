@@ -7,6 +7,6 @@
         data-toggle="dropdown" fxLayout="column" fxLayoutGap="2%"
         fxLayoutAlign="start end">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        Schedulings <span class="badge badge-pill custom-badge">3</span>
+        Schedulings <span class="badge badge-pill custom-badge">{{ schedulingsCounter$ | async }}</span>
     </button>
 </nav>

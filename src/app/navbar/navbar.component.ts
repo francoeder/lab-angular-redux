@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { schedulingsCounter } from '../agenda-state-store/agenda.selectors';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  schedulingsCounter$: Observable<number>;
+
+  constructor(private store: Store) {
+    this.schedulingsCounter$ = store.select(schedulingsCounter);
+  }
 
   ngOnInit(): void {
   }
