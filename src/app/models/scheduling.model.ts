@@ -1,10 +1,8 @@
 export class SchedulingModel {
     title: string;
     color: any = colors.yellow;
-    startDate: string;
-    endDate: string;
-    get start(): Date { return new Date(this.startDate) }
-    get end(): Date { return new Date(this.startDate) }
+    start: Date
+    end: Date
 }
 
 export const colors: any = {
